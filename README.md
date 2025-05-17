@@ -22,7 +22,7 @@ git clone https://github.com/ialakey/pioneerpicsel.git
 cd pioneerpicsel
 ```
 
-### 2. Запуск PostgreSQL и Redis (Docker)
+### 2. Запуск через Docker
 
 ```bash
 docker-compose up -d
@@ -45,8 +45,6 @@ docker-compose up -d
 ## 📊 Postman
 
 Импортируй файл: [PioneerPicsel.postman_collection.json](https://github.com/ialakey/pioneerpicsel/blob/main/PioneerPicsel.postman_collection.json)
-
----
 
 ---
 
