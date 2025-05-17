@@ -36,33 +36,6 @@ docker-compose up -d
 
 ---
 
-## 🔐 Авторизация
-
-**POST** `/api/auth/login`  
-Тело запроса:
-
-```json
-{
-  "emailOrPhone": "alice@example.com",
-  "password": "123456"
-}
-```
-
-Ответ:
-
-```json
-{
-  "token": "JWT_TOKEN"
-}
-```
-
-Добавляй его в заголовок:
-```
-Authorization: Bearer JWT_TOKEN
-```
-
----
-
 ## 📮 Swagger
 
 - URL: http://localhost:8080/swagger-ui.html
@@ -71,24 +44,9 @@ Authorization: Bearer JWT_TOKEN
 
 ## 📊 Postman
 
-Импортируй файл: `PioneerPicsel.postman_collection.json`
+Импортируй файл: [PioneerPicsel.postman_collection.json](https://github.com/ialakey/pioneerpicsel/blob/main/PioneerPicsel.postman_collection.json)
 
 ---
-
-## 🧪 Тестовые данные (в `data.sql`)
-
-```sql
-INSERT INTO user_info (id, name, date_of_birth, password) VALUES
-(1, 'Alice', '1990-01-01', '$2a$10$...'), 
-(2, 'Bob', '1985-05-05', '$2a$10$...');
-
-INSERT INTO email_data (email, user_info_id) VALUES ('alice@example.com', 1);
-INSERT INTO phone_data (phone, user_info_id) VALUES ('+1234567890', 1);
-
-INSERT INTO account (user_info_id, balance, initial_balance) VALUES (1, 1000.00, 1000.00);
-```
-
-Пароль: `123456`
 
 ---
 
@@ -100,7 +58,3 @@ INSERT INTO account (user_info_id, balance, initial_balance) VALUES (1, 1000.00,
 - ❌ Валидация: хотя бы один email и телефон обязателен
 
 ---
-
-## 📦 Автор
-
-[I_Alakey](https://github.com/ialakey)
