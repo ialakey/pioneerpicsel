@@ -1,0 +1,203 @@
+{
+  "info": {
+    "_postman_id": "cbe4c53a-b8a4-45fc-bdbe-65c7aefd9fd4",
+    "name": "PioneerPicsel API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "generated-by-chatgpt"
+  },
+  "item": [
+    {
+      "name": "\ud83d\udd10 \u0410\u0432\u0442\u043e\u0440\u0438\u0437\u0430\u0446\u0438\u044f (\u043b\u043e\u0433\u0438\u043d)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"emailOrPhone\": \"alice@example.com\", \"password\": \"123456\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      }
+    },
+    {
+      "name": "\u2709\ufe0f \u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c email",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"newalice@example.com\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/user-data/email",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "user-data",
+            "email"
+          ]
+        }
+      }
+    },
+    {
+      "name": "\ud83d\uddd1 \u0423\u0434\u0430\u043b\u0438\u0442\u044c email",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"alice@example.com\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/user-data/email",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "user-data",
+            "email"
+          ]
+        }
+      }
+    },
+    {
+      "name": "\ud83d\udcf1 \u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"+12223334444\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/user-data/phone",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "user-data",
+            "phone"
+          ]
+        }
+      }
+    },
+    {
+      "name": "\ud83d\uddd1 \u0423\u0434\u0430\u043b\u0438\u0442\u044c \u0442\u0435\u043b\u0435\u0444\u043e\u043d",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"+1234567890\"}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/user-data/phone",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "user-data",
+            "phone"
+          ]
+        }
+      }
+    },
+    {
+      "name": "\ud83d\udcb8 \u041f\u0435\u0440\u0435\u0432\u043e\u0434 \u0441\u0440\u0435\u0434\u0441\u0442\u0432",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"toUserId\": 2, \"amount\": 100.0}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/transfer",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "api",
+            "transfer"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": "PASTE_YOUR_JWT_HERE"
+    }
+  ]
+}
